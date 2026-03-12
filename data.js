@@ -1,38 +1,126 @@
-const factsData = [
+// قاعدة بيانات القاموس - يمكن توسعتها إلى آلاف الكلمات
+const dictionaryData = [
     {
         id: 1,
-        category: "علاقات",
-        title: "تأثير الابتسامة",
-        content: "الابتسامة معدية؛ فعندما تبتسم لشخص ما، فإن دماغه يفرز الدوبامين مما يجعله يبتسم لك تلقائياً ويحسن مزاجه ومزاجك.",
-        source: "دراسات علم النفس الاجتماعي"
+        arabic: "سلام",
+        english: "peace",
+        pronunciation: "/salaːm/",
+        category: "اسم",
+        example: {
+            arabic: "السلام عليكم",
+            english: "Peace be upon you"
+        }
     },
     {
         id: 2,
-        category: "عمل",
-        title: "قاعدة الـ 5 ثواني",
-        content: "إذا كانت لديك فكرة أو قرار، ابدأ بتنفيذه خلال 5 ثوانٍ قبل أن يعطيك عقلك excuses للتوقف.",
-        source: "كتاب قاعدة الخمس ثواني"
+        arabic: "كتاب",
+        english: "book",
+        pronunciation: "/kitaːb/",
+        category: "اسم",
+        example: {
+            arabic: "أقرأ كتاباً كل أسبوع",
+            english: "I read a book every week"
+        }
     },
     {
         id: 3,
-        category: "صحة نفسية",
-        title: "قوة الامتنان",
-        content: "كتابة 3 أشياء أنت ممتن لها يومياً لمدة أسبوعين ترفع مستوى السعادة بنسبة ملحوظة وتقلل التوتر.",
-        source: "مجلة علم النفس الإيجابي"
+        arabic: "يكتب",
+        english: "writes",
+        pronunciation: "/yaktub/",
+        category: "فعل",
+        example: {
+            arabic: "هو يكتب رسالة",
+            english: "He writes a letter"
+        }
     },
     {
         id: 4,
-        category: "علاقات",
-        title: "اسم الشخص",
-        content: "من أحب الأصوات إلى الإنسان هو صدى اسمه؛ استخدام اسم الشخص في الحوار يقرب المسافات ويزيد الثقة.",
-        source: "ديل كارنيجي - كيف تكسب الأصدقاء"
+        arabic: "جميل",
+        english: "beautiful",
+        pronunciation: "/jamiːl/",
+        category: "صفة",
+        example: {
+            arabic: "المنظر جميل جداً",
+            english: "The view is very beautiful"
+        }
     },
     {
         id: 5,
-        category: "تطوير ذات",
-        title: "قاعدة باريتو",
-        content: "80% من النتائج تأتي من 20% من الجهود. ركز على الـ 20% الأكثر تأثيراً في حياتك.",
-        source: "مبدأ باريتو الاقتصادي"
+        arabic: "مدرسة",
+        english: "school",
+        pronunciation: "/madrasa/",
+        category: "اسم",
+        example: {
+            arabic: "أذهب إلى المدرسة يومياً",
+            english: "I go to school daily"
+        }
+    },
+    {
+        id: 6,
+        arabic: "hello",
+        english: "مرحباً",
+        pronunciation: "/həˈloʊ/",
+        category: "تحية",
+        example: {
+            arabic: "قلت مرحباً لصديقي",
+            english: "I said hello to my friend"
+        }
+    },
+    {
+        id: 7,
+        arabic: "love",
+        english: "حب",
+        pronunciation: "/lʌv/",
+        category: "اسم",
+        example: {
+            arabic: "الحب شعور جميل",
+            english: "Love is a beautiful feeling"
+        }
+    },
+    {
+        id: 8,
+        arabic: "run",
+        english: "يجري",
+        pronunciation: "/rʌn/",
+        category: "فعل",
+        example: {
+            arabic: "يجري في الحديقة كل صباح",
+            english: "He runs in the park every morning"
+        }
+    },
+    {
+        id: 9,
+        arabic: "quick",
+        english: "سريع",
+        pronunciation: "/kwɪk/",
+        category: "صفة",
+        example: {
+            arabic: "هو متعلم سريع",
+            english: "He is a quick learner"
+        }
+    },
+    {
+        id: 10,
+        arabic: "friend",
+        english: "صديق",
+        pronunciation: "/frend/",
+        category: "اسم",
+        example: {
+            arabic: "صديقي يساعدني دائماً",
+            english: "My friend always helps me"
+        }
     }
-    // قم بنسخ اللقطة (Object) فوق وتكرارها حتى تصل لـ 100 معلومة
+    // 🎯 أضف هنا بقية الكلمات حتى تصل لعدد كبير
+    // انسخ الكائن {} وغير البيانات
 ];
+
+// دالة للحصول على كلمة اليوم (تتغير يومياً)
+function getWordOfTheDay() {
+    const today = new Date().getDate();
+    return dictionaryData[today % dictionaryData.length];
+}
+
+// دالة للحصول على التصنيفات الفريدة
+function getUniqueCategories() {
+    return [...new Set(dictionaryData.map(item => item.category))];
+}
