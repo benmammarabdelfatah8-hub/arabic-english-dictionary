@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>100 معلومة | موسوعة الحياة الاجتماعية</title>
+    <!-- خطوط عربية فخمة من جوجل -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <!-- أيقونات -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- الرأس -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fa-solid fa-book-open-reader"></i>
+                <h1>100 معلومة</h1>
+            </div>
+            <div class="header-controls">
+                <button id="darkModeBtn" title="الوضع الليلي">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- القسم الرئيسي -->
+    <section class="hero">
+        <div class="container">
+            <h2>موسوعة المعرفة الاجتماعية</h2>
+            <p>100 حقيقة موثقة ومُصنفة لتطوير حياتك وعلاقاتك</p>
+            
+            <!-- البحث -->
+            <div class="search-box">
+                <i class="fa-solid fa-search"></i>
+                <input type="text" id="searchInput" placeholder="ابحث عن معلومة...">
+            </div>
+
+            <!-- التصنيفات -->
+            <div class="categories" id="categoriesContainer">
+                <button class="cat-btn active" data-category="all">الكل</button>
+                <!-- سيتم إضافة الباقي بالجافاسكريبت -->
+            </div>
+        </div>
+    </section>
+
+    <!-- شبكة المعلومات -->
+    <section class="facts-section">
+        <div class="container">
+            <div class="facts-grid" id="factsGrid">
+                <!-- سيتم توليد البطاقات هنا -->
+            </div>
+        </div>
+    </section>
+
+    <!-- تذييل الصفحة -->
+    <footer>
+        <div class="container">
+            <p>تم تجميع المعلومات من مصادر موثقة © 2024</p>
+            <div class="social-links">
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
