@@ -1,116 +1,23 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>قاموس الجسر | عربي - إنجليزي</title>
-    
-    <!-- خطوط عربية وإنجليزية احترافية -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    
-    <!-- أيقونات -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Arabic-English Dictionary</title>
 </head>
 <body>
-
-    <!-- شريط التنقل -->
-    <nav class="navbar">
-        <div class="container nav-content">
-            <div class="logo">
-                <i class="fa-solid fa-book-open"></i>
-                <span>قاموس الجسر</span>
-            </div>
-            <div class="nav-actions">
-                <button id="themeToggle" class="icon-btn" title="الوضع الليلي">
-                    <i class="fa-solid fa-moon"></i>
-                </button>
-                <button id="favoritesBtn" class="icon-btn" title="المفضلة">
-                    <i class="fa-regular fa-heart"></i>
-                    <span class="badge" id="favCount">0</span>
-                </button>
-            </div>
-        </div>
-    </nav>
-
-    <!-- القسم الرئيسي -->
-    <header class="hero">
-        <div class="container">
-            <h1>اكتشف اللغة <span class="highlight">بذكاء</span></h1>
-            <p class="subtitle">قاموس عربي - إنجليزي عصري مع ميزات تعلم متقدمة</p>
-            
-            <!-- مربع البحث -->
-            <div class="search-wrapper">
-                <div class="search-box">
-                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                    <input type="text" id="searchInput" placeholder="ابحث عن كلمة... (عربي أو إنجليزي)" autocomplete="off">
-                    <button id="clearSearch" class="clear-btn"><i class="fa-solid fa-xmark"></i></button>
-                </div>
-                
-                <!-- اقتراحات البحث -->
-                <div class="suggestions" id="suggestionsBox"></div>
-            </div>
-
-            <!-- إحصائيات سريعة -->
-            <div class="stats">
-                <div class="stat-item">
-                    <span class="stat-number" id="wordsCount">0</span>
-                    <span class="stat-label">كلمة</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number" id="categoriesCount">0</span>
-                    <span class="stat-label">تصنيف</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number" id="todayWord">-</span>
-                    <span class="stat-label">كلمة اليوم</span>
-                </div>
-            </div>
-        </div>
+    <header>
+        <h1>Arabic-English Dictionary</h1>
     </header>
-
-    <!-- نتائج البحث -->
-    <main class="results-section">
-        <div class="container">
-            <div id="resultsContainer" class="results-grid"></div>
-            <div id="noResults" class="no-results hidden">
-                <i class="fa-regular fa-face-frown"></i>
-                <p>لم نجد نتائج لبحثك. جرب كلمة أخرى.</p>
-            </div>
-            <div id="loading" class="loading hidden">
-                <div class="spinner"></div>
-                <p>جاري البحث...</p>
-            </div>
-        </div>
+    <main>
+        <p>Welcome to the Arabic-English Dictionary!</p>
     </main>
-
-    <!-- لوحة المفضلة (منبثقة) -->
-    <div id="favoritesModal" class="modal hidden">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3>❤️ كلماتك المفضلة</h3>
-                <button id="closeModal" class="close-btn"><i class="fa-solid fa-xmark"></i></button>
-            </div>
-            <div id="favoritesList" class="favorites-list"></div>
-        </div>
-    </div>
-
-    <!-- تذييل الصفحة -->
     <footer>
-        <div class="container">
-            <p>قاموس الجسر © 2024 | مبني بحب لتعلم اللغة</p>
-            <div class="footer-links">
-                <a href="#">حول الموقع</a>
-                <a href="#">إضافة كلمة</a>
-                <a href="#">اتصل بنا</a>
-            </div>
-        </div>
+        <ul>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
     </footer>
-
-    <!-- ملفات الجافاسكريبت -->
-    <script src="data.js"></script>
-    <script src="script.js"></script>
 </body>
 </html>
