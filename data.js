@@ -57,8 +57,8 @@ const dictionaryData = [
     },
     {
         id: 6,
-        arabic: "hello",
-        english: "مرحباً",
+        arabic: "مرحباً",
+        english: "hello",
         pronunciation: "/həˈloʊ/",
         category: "تحية",
         example: {
@@ -68,8 +68,8 @@ const dictionaryData = [
     },
     {
         id: 7,
-        arabic: "love",
-        english: "حب",
+        arabic: "حب",
+        english: "love",
         pronunciation: "/lʌv/",
         category: "اسم",
         example: {
@@ -79,8 +79,8 @@ const dictionaryData = [
     },
     {
         id: 8,
-        arabic: "run",
-        english: "يجري",
+        arabic: "يجري",
+        english: "run",
         pronunciation: "/rʌn/",
         category: "فعل",
         example: {
@@ -90,8 +90,8 @@ const dictionaryData = [
     },
     {
         id: 9,
-        arabic: "quick",
-        english: "سريع",
+        arabic: "سريع",
+        english: "quick",
         pronunciation: "/kwɪk/",
         category: "صفة",
         example: {
@@ -101,8 +101,8 @@ const dictionaryData = [
     },
     {
         id: 10,
-        arabic: "friend",
-        english: "صديق",
+        arabic: "صديق",
+        english: "friend",
         pronunciation: "/frend/",
         category: "اسم",
         example: {
